@@ -1,0 +1,531 @@
+ /* ------------------------------ 
+       Global Styles 
+    ------------------------------ */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+   
+    body {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+   
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+   
+    /* Utility classes */
+    .btn {
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+   
+    /* ------------------------------ 
+          Header / Top Bar 
+       ------------------------------ */
+    header {
+        width: 100%;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+   
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #2b7b67;
+    }
+   
+    .txt-1{
+        color: #102442;
+
+    }
+
+    .txt-2{
+        color: black;
+    }
+    .logo img {
+        height: 30px;
+        margin-right: 0.5rem;
+    }
+
+    .logo span{
+        font-size: 2rem;
+    }
+   
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+   
+    .phone-number {
+        font-weight: bold;
+        color: #102442;
+        white-space: nowrap;
+    }
+   
+    .btn-book-tour {
+        background-color:#00AA6C;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        border: none;
+    }
+   
+    .btn-book-tour:hover {
+        background-color: #246956;
+    }
+
+    #bar-button{   
+        display: none;
+        height: 0rem;
+
+      }
+   
+    /* ------------------------------ 
+          Hero / Main Section 
+       ------------------------------ */
+    .hero {
+        position: relative;
+        width: 100%;
+        min-height: 92vh;
+        background: url('./assets/warehouse.jpg');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+   
+    /* 
+         Optional overlay for better text contrast
+       */
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.15);
+    }
+   
+    .hero-content {
+        position: relative;
+        max-width: 1200px;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        display: flex;
+        padding: 2rem;
+        gap: 2rem;
+       background-color: #d1e3de;
+    }
+   
+    /* Left and Right columns in desktop view */
+    .left-content,
+    .right-content {
+        flex: 1;
+    }
+   
+    /* ------------------------------ 
+          Left Content (Text) 
+       ------------------------------ */
+    .headline {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #2b7b67;
+        line-height: 1.3;
+    }
+   
+   
+    .icon{
+       margin: 0.1rem 0.5rem 0rem 0.5rem;
+       color: rgb(21, 168, 47);
+    }
+   
+    .star-rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        background-color: white;
+        width: 18rem;
+        border-radius: 0.3rem;
+        /* padding: 0.2rem; */
+    }
+   
+    .star-rating span {
+        color: gold;
+        margin-right: 0.25rem;
+        font-size: 1.2rem;
+    }
+   
+    .star-text {
+        margin-left: 0.5rem;
+        color: #555;
+        font-size: 0.95rem;
+    }
+   
+    .subpoints {
+        margin-bottom: 1rem;
+    }
+   
+    .icondiv {
+        display: inline;
+        /* background-color: white; */
+        background-color: white;
+        padding: 0.4rem;
+        border-radius: 0.5rem;
+        color: green;
+    }
+   
+    .listdiv {
+        display: inline;
+    }
+   
+    .listone {
+        margin-left: 0.6rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+   
+    .listtwo{
+       margin-left: 2.5rem;
+       margin-top: 0.2rem;
+       margin-bottom: 1.2rem;
+    }
+   
+    .special-note {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+   
+    .ask-space-btn {
+        background-color: #2b7b67;
+        color: #fff;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+    }
+   
+    .ask-space-btn:hover {
+        background-color: #246956;
+    }
+   
+    .price-info {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #2b7b67;
+        margin-top: 2rem;
+    }
+   
+    .WareSpace_img{
+       height: 6rem;
+       padding: 0.6rem;
+       border-radius: 1.5rem;
+    }
+   
+    /* ------------------------------ 
+          Right Content (Form) 
+       ------------------------------ */
+    .form-container {
+        background: #f7f7f7;
+        padding: 1.5rem;
+        border-radius: 6px;
+    }
+   
+    .form-container h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+   
+    .form-subtitle {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 1rem;
+    }
+   
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+   
+    .form-group label {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        font-size: 0.95rem;
+    }
+   
+    .form-group input {
+        padding: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 0.95rem;
+    }
+   
+    
+
+    .form-group p{
+
+        font-size: 0.8rem;
+        color: #00000066;
+        font-style: italic;
+        line-height: 1.5rem;
+    }
+
+    .form-submit {
+        background: #00AA6C;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+   
+    .form-submit:hover {
+        background: #246956;
+    }
+   
+    .form-extra {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.4;
+    }
+   
+    .form-extra-1{
+        color: black;
+    }
+    .form-extra a {
+        color: #2b7b67;
+        text-decoration: underline;
+    }
+
+    .twoimagdiv img{
+        height: 4rem;
+        border-radius:50%;
+    }
+
+    .lst-btn{
+        border-radius: 5rem;
+        color: #E6F4EB;
+        background-color: #E6F4EB;
+        width: 13rem;
+        padding: 0.5rem;
+        color: black;
+        margin-top: 1rem;
+    }
+
+    .img5{
+        margin-left: -1.5rem; 
+        margin-right: 1rem;
+    }
+    
+    .parenttwoimagdiv{
+        display: flex;
+       
+    }
+
+    .spandiv{
+        word-wrap: break-word; 
+        width: 22rem;
+        margin-bottom: 2rem;
+    }
+   
+    /* ------------------------------ 
+          Responsiveness
+       ------------------------------ */
+
+@media (max-width: 1222px){
+
+    .spandiv{
+        width: 15rem;
+    }
+}
+
+    /* Medium screens: Stack columns below 992px */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+  
+    .left-content,
+    .right-content {
+        width: 100%;
+    }
+
+    .twoimagdiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .parenttwoimagdiv{
+        display: block;
+    }
+
+    .spandiv{
+        width: auto;
+    }
+}
+
+/* Small screens: Below 768px, further adjustments */
+@media (max-width: 763px) {
+    header {
+        /* flex-direction: column; */
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .phone-number {
+        font-size: 0.95rem;
+    }
+  
+    .hero {
+        background: none;
+        padding: 1rem;
+        background-image: url("./assets/warehouse.jpg");
+        position: relative;
+        min-height: 30vh; 
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero::before {
+        background: none;
+    }
+
+    .hero-content {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 1rem;
+        position: absolute;
+        bottom: -73rem;
+        /* margin-top: 2rem; */
+    }
+
+    .headline {
+        font-size: 2.4rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .imagdiv {
+        position: absolute;
+        top: -3rem;
+    }
+
+    .lastimg {
+        display: none; 
+    }
+
+    .WareSpace_img{
+        height: 5rem
+    }
+
+    .star-rating {
+        margin-top: 2rem;
+    }
+
+    .star-rating span {
+        font-size: 1rem;
+    }
+
+    .star-text {
+        font-size: 0.85rem;
+    }
+
+    .ask-space-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .price-info {
+        margin-bottom: 1rem;
+    }
+
+    .left-content {
+        padding-left: 1rem;
+    }
+
+    .form-container {
+        margin-top: 1rem;
+    }
+
+    #bar-button{
+        display: inline;
+        height: 2rem;
+        padding-top: 0.5rem
+    }
+
+    .btn-book-tour{
+        display: none;
+    }
+}
+
+@media (max-width: 440px) {
+
+    .hero::before {
+        background: none;
+    }
+
+    .hero-content {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 1rem;
+        position: absolute;
+        bottom: -68rem;
+    }
+
+    .headline {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .star-rating {
+        margin-top: 2rem;
+        width: 16rem;
+    }
+
+    .logo img{
+        font-size: 0.9rem;
+    }
+
+    .logo span{
+        font-size: 1rem;
+    }
+     
+}
+
+@media (max-width: 360px) {
+
+    .WareSpace_img {
+        height: 4.7rem;
+    }
+
+}
